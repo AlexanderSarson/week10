@@ -1,0 +1,30 @@
+{
+  "name": "05-friday-exam-prep",
+  "dockerFile": "Dockerfile",
+  "forwardPorts": [3456],
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+  "workspaceFolder": "/workspace",
+  "containerEnv": {
+    "CHOKIDAR_USEPOLLING": "true"
+  },
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "wallabyjs.quokka-vscode",
+    "xabikos.javascriptsnippets",
+    "esbenp.prettier-vscode",
+    "christian-kohler.npm-intellisense"
+  ],
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/zsh",
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.formatOnSave": true,
+    "prettier.requireConfig": true,
+    "editor.tabSize": 2
+  },
+  "postCreateCommand": "npm install"
+}

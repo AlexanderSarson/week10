@@ -1,0 +1,3 @@
+rest/ApplicationConfig.class
+rest/TestResource.class
+rest/CorsResponseFilter.class
